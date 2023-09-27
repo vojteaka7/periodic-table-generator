@@ -1,0 +1,9 @@
+<div style="width: 60px; height: 90px; font-size: 0.9em; padding: 5px;">
+    <b style="text-align: left; display: inline-block;">{{ p.number }}</b>
+    <span style="text-align: right; display: inline-block;">{{ p.atomic_mass }}</span>
+    <p style="margin: 1px; {% if p.name_czech | length >= 10 %} font-size: 0.75em {% elif p.name_czech | length > 7 %} font-size: 0.9em; {% endif %} ">{{ p.name_czech }}</p>
+    <h2 style="margin: 1px;"><span style="text-decoration: underline solid {% if p.category == 'diatomic nonmetal' %} #f94144 {% elif p.category == 'noble gas' %} #f3722c {% elif p.category == 'alkali metal' %} #f8961e {% elif p.category == 'alkaline earth metal' %} #f9844a {% elif p.category == 'metalloid' %} #f9c74f {% elif p.category == 'polyatomic nonmetal' %} #90be6d {% elif p.category == 'transition metal' %} #43aa8b {% elif p.category == 'actinide' %} #4d908e {% elif p.category == 'post-transition metal' %} #577590 {% elif p.category == 'lanthanide' %} #277da1 {% elif p.category == 'metalloid' %} #212529 {% else %} #ffffff {% endif %}">{{ p.symbol }}</span>
+    <small style="font-weight: normal; font-size: 0.5em; text-decoration: none">{% if p.phase == 'Gas' %} ☁️
+    {% elif p.phase == 'Liquid' %} 💧{% endif %}</small></h2>
+    <p style="margin: 1px">{{ p.ox_s }}</p>
+</div>

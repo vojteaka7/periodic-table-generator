@@ -1,0 +1,11 @@
+<html>
+<body>
+<table>
+    {% for radek in tabulka %}
+        <tr>
+            {% for prvek in radek %}
+                <td {% if prvek != '' %} style="border: 2px solid black" {% endif %}>{{ prvek | safe }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
