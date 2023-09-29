@@ -1,6 +1,6 @@
 import json
 
-with open('pertab_s_ox_cisly.json', encoding='utf-8') as f:
+with open('pertab_with_ox_states.json', encoding='utf-8') as f:
     pertab_oxidy = json.load(f)
 
 with open('pertab.json', encoding='utf-8') as f:
@@ -15,6 +15,6 @@ for prvek in pertab_oxidy:
             pertab_bez[i]['oxidation_states'] = prvek['oxidationStates'] if prvek['oxidationStates'] != 'unknown' else ''
 
 
-with open('pertab_oxidy.json', 'w', encoding='utf-8') as f:
+with open('pertab_oxidation_states.json', 'w', encoding='utf-8') as f:
     output = json.dumps({'elements': pertab_bez}, indent=4)
     f.write(output)
