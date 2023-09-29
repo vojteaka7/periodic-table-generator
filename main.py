@@ -7,8 +7,8 @@ env = jinja2.Environment(
     loader=PackageLoader("main"),
     autoescape=select_autoescape()
 )
-prvek_template = env.get_template('prvek.html')
-tabulka_template = env.get_template('tabulka.html')
+prvek_template = env.get_template('element.html')
+tabulka_template = env.get_template('table.html')
 
 
 with open('pertab_ox_s.json', encoding='utf-8') as f:
