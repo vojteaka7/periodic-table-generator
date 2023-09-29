@@ -19,9 +19,6 @@ tabulka = [['']*18 for _ in range(10+1)]
 
 # render element template and add it to the table (for each element)
 for p in prvky:
-    p['atomic_mass'] = float(round(p['atomic_mass'], 0))
-
-    
     tabulka[p['ypos']-1][p['xpos']-1] = prvek_template.render(p=p)
     
 # save the result
