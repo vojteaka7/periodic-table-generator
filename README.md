@@ -12,7 +12,11 @@ pip instal jinja2
 
 ## Elements data
 
-The data about elements was taken from [Bowserinator/Periodic-Table-JSON](https://github.com/Bowserinator/Periodic-Table-JSON). I added oxidation states data from the `pertab_with_ox_states.json` copied from <https://documenter.getpostman.com/view/14793990/TzmCgD9k#618ced08-5d55-49ea-8638-9393daf30daa> (the actual API doesn't work). Czech names were added manually. 
+The data about elements was taken from [Bowserinator/Periodic-Table-JSON](https://github.com/Bowserinator/Periodic-Table-JSON). I added oxidation states data from the `pertab_with_ox_states.json` copied from <https://documenter.getpostman.com/view/14793990/TzmCgD9k#618ced08-5d55-49ea-8638-9393daf30daa> (the actual API doesn't work). Czech names were added manually.
+
+## Changing the appearance
+
+To change the appearance of the periodic table, edit `templates/element.html`. It's a standard jinja2 template, which is used for each cell of the periodic table. To see all the available properties look at `pertab_ox_s.json`.
 
 ---
 
